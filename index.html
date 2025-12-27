@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agify - Age Predictor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="agify-container">
+        <div class="agify-card">
+            <div class="agify-header">
+                <i class="bi bi-person-circle agify-icon"></i>
+                <h1 class="agify-title">Age Predictor</h1>
+                <p class="agify-subtitle">Enter a name to predict the age</p>
+            </div>
+            
+            <div class="agify-form-container">
+                <div class="agify-input-wrapper">
+                    <i class="bi bi-person agify-input-icon"></i>
+                    <input 
+                        type="text" 
+                        id="agify-name-input" 
+                        class="agify-input" 
+                        placeholder="Enter a name"
+                        autocomplete="off"
+                    >
+                </div>
+                <button 
+                    id="agify-submit-btn" 
+                    class="agify-button"
+                >
+                    <span class="agify-button-text">Predict Age</span>
+                    <span class="agify-loader" id="agify-loader" style="display: none;">
+                        <i class="bi bi-arrow-repeat agify-spinner"></i>
+                    </span>
+                </button>
+            </div>
+
+            <div class="agify-result-container" id="agify-result-container" style="display: none;">
+                <div class="agify-result-card">
+                    <i class="bi bi-check-circle agify-result-icon"></i>
+                    <div class="agify-result-content">
+                        <p class="agify-result-name" id="agify-result-name"></p>
+                        <p class="agify-result-age" id="agify-result-age"></p>
+                        <p class="agify-result-count" id="agify-result-count"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agify-error-container" id="agify-error-container" style="display: none;">
+                <i class="bi bi-exclamation-triangle agify-error-icon"></i>
+                <p class="agify-error-message" id="agify-error-message"></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
+

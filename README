@@ -1,0 +1,13 @@
+# AGIFY AGE PREDICTOR
+
+## Project Description
+
+This website is an age prediction tool that uses the Agify API to estimate a person's age based on their name. Users can enter any name in the input field, and the application will fetch data from the Agify API to display the predicted age along with the number of data points used for the prediction. The website features a clean and modern user interface with cherry blossom pink, white, and black color scheme. It is fully responsive and works on all screen sizes including mobile devices and can be installed as a Progressive Web App.
+
+## API Details Used
+
+The application uses the Agify API which is a free REST API that predicts the age of a person based on their name. The API endpoint is https://api.agify.io and it accepts a name parameter as a query string. When a request is made to the API with a name parameter, it returns a JSON object containing the name, predicted age, and the count of data points used for the prediction. The API does not require authentication or an API key. The request is made using the GET method with the name passed as a query parameter in the URL format: https://api.agify.io?name=namevalue.
+
+## Instructions to Run the Project
+
+To run this project, you need a local web server since the application uses ES6 modules. If you are using XAMPP, place the agify folder inside the htdocs directory. Start the XAMPP Apache server, then open your web browser and navigate to the appropriate URL based on your folder structure, for example http://localhost/agify/index.html or http://localhost/your-folder-name/agify/index.html depending on where you placed the folder. Alternatively, you can use any other local web server like Python's http.server, Node.js http-server, or any other web server of your choice. Simply navigate to the agify folder directory and start the server, then access the index.html file through the server URL. The website will load and you can start entering names to predict ages. Make sure you have an active internet connection as the application needs to fetch data from the Agify API.

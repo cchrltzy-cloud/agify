@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFB7C5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.agify-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.agify-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.agify-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.agify-icon {
+    font-size: 60px;
+    color: #FFB7C5;
+    margin-bottom: 15px;
+}
+
+.agify-title {
+    font-size: 32px;
+    color: black;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.agify-subtitle {
+    font-size: 16px;
+    color: #666;
+    font-weight: 400;
+}
+
+.agify-form-container {
+    margin-bottom: 25px;
+}
+
+.agify-input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.agify-input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #999;
+}
+
+.agify-input {
+    width: 100%;
+    padding: 15px 15px 15px 50px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    color: black;
+    background-color: white;
+    transition: border-color 0.3s ease;
+}
+
+.agify-input:focus {
+    outline: none;
+    border-color: #FFB7C5;
+}
+
+.agify-input-error {
+    border-color: #ff6b6b !important;
+    background-color: #fff5f5;
+}
+
+.agify-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #FFB7C5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.agify-button:hover {
+    background-color: #ffa5b8;
+    transform: translateY(-2px);
+}
+
+.agify-button:active {
+    transform: translateY(0);
+}
+
+.agify-button:disabled {
+    background-color: #ffd0da;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.agify-loader {
+    display: inline-block;
+}
+
+.agify-spinner {
+    animation: agify-spin 1s linear infinite;
+    font-size: 18px;
+}
+
+@keyframes agify-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.agify-result-container {
+    margin-top: 25px;
+    animation: agify-fadeIn 0.5s ease;
+}
+
+@keyframes agify-fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.agify-result-card {
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    border: 2px solid #FFB7C5;
+}
+
+.agify-result-icon {
+    font-size: 50px;
+    color: #FFB7C5;
+    margin-bottom: 15px;
+}
+
+.agify-result-content {
+    color: black;
+}
+
+.agify-result-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: black;
+    text-transform: capitalize;
+}
+
+.agify-result-age {
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFB7C5;
+    margin-bottom: 10px;
+}
+
+.agify-result-count {
+    font-size: 14px;
+    color: #666;
+    font-weight: 400;
+}
+
+.agify-error-container {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #fff5f5;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #ffcccc;
+    animation: agify-fadeIn 0.5s ease;
+}
+
+.agify-error-icon {
+    font-size: 40px;
+    color: #ff6b6b;
+    margin-bottom: 10px;
+}
+
+.agify-error-message {
+    font-size: 16px;
+    color: #d32f2f;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .agify-card {
+        padding: 30px 20px;
+    }
+
+    .agify-icon {
+        font-size: 50px;
+    }
+
+    .agify-title {
+        font-size: 28px;
+    }
+
+    .agify-subtitle {
+        font-size: 14px;
+    }
+
+    .agify-input {
+        font-size: 16px;
+        padding: 12px 12px 12px 45px;
+    }
+
+    .agify-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .agify-result-age {
+        font-size: 40px;
+    }
+
+    .agify-result-name {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+
+    .agify-card {
+        padding: 25px 15px;
+        border-radius: 15px;
+    }
+
+    .agify-icon {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+    .agify-title {
+        font-size: 24px;
+    }
+
+    .agify-subtitle {
+        font-size: 13px;
+    }
+
+    .agify-input {
+        font-size: 14px;
+        padding: 10px 10px 10px 40px;
+    }
+
+    .agify-input-icon {
+        font-size: 18px;
+        left: 12px;
+    }
+
+    .agify-button {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .agify-result-card {
+        padding: 20px;
+    }
+
+    .agify-result-icon {
+        font-size: 40px;
+    }
+
+    .agify-result-age {
+        font-size: 36px;
+    }
+
+    .agify-result-name {
+        font-size: 18px;
+    }
+
+    .agify-result-count {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .agify-card {
+        padding: 20px 12px;
+    }
+
+    .agify-title {
+        font-size: 20px;
+    }
+
+    .agify-icon {
+        font-size: 40px;
+    }
+}
+
